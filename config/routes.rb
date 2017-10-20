@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
+  # get '/movies' => 'movies#index'
+  # get '/movies/:id' => 'movies#show'
+  # delete '/movies/:id' => 'movies#destroy'
+  # patch '/movies/:id' => 'movies#update'
+  # post '/movies' => 'movies#create'
   resources :users, only: %i[index show]
 end
